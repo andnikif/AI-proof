@@ -101,49 +101,57 @@
                 </div>
             </div>
 
-<!-- Formspree Form - Updated with simpler implementation -->
-<div class="assessment-form">
-    <form id="ai-assessment-form" action="https://formspree.io/f/xyzeoarj" method="POST">
-        <div class="form-group">
-            <label for="job-title">Current Job Title/Role</label>
-            <input type="text" id="job-title" name="job-title" required>
+            <!-- Formspree Form - Replace action URL with your actual Formspree endpoint -->
+            <div class="assessment-form">
+                <form id="ai-assessment-form" action="https://formspree.io/f/xyzeoarj" method="POST">
+                    <div class="form-group">
+                        <label for="job-title">Current Job Title/Role</label>
+                        <input type="text" id="job-title" name="job-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Industry Sector</label>
+                        <select id="industry" name="industry" required>
+                            <option value="" disabled selected>Select your industry</option>
+                            <option value="fintech">Financial Services/FinTech</option>
+                            <option value="marketing">Marketing & Social Media</option>
+                            <option value="accounting">Accounting & Auditing</option>
+                            <option value="supply-chain">Supply Chain & Logistics</option>
+                            <option value="hr">Human Resources & Talent</option>
+                            <option value="healthcare">Healthcare & Life Sciences</option>
+                            <option value="transformation">Digital Transformation</option>
+                            <option value="other">Other Industry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Years of Experience</label>
+                        <select id="experience" name="experience" required>
+                            <option value="" disabled selected>Select experience level</option>
+                            <option value="0-2">0-2 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5-10">5-10 years</option>
+                            <option value="10+">10+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-privacy">
+                        <p>Your information is secure and will only be used to deliver your personalized assessment.</p>
+                    </div>
+                    <button type="submit" class="btn btn-large btn-primary">Get Your Free AI Career Assessment</button>
+                </form>
+                
+                <!-- Success message (hidden by default) -->
+                <div id="form-success" class="form-success" style="display: none;">
+                    <div class="icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>Thank You!</h3>
+                    <p>Your assessment is being prepared. Please check your email shortly for your personalized AI career impact report.</p>
+                    <p>In the meantime, feel free to explore our industry vertical programs below.</p>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="industry">Industry Sector</label>
-            <select id="industry" name="industry" required>
-                <option value="" disabled selected>Select your industry</option>
-                <option value="fintech">Financial Services/FinTech</option>
-                <option value="marketing">Marketing & Social Media</option>
-                <option value="accounting">Accounting & Auditing</option>
-                <option value="supply-chain">Supply Chain & Logistics</option>
-                <option value="hr">Human Resources & Talent</option>
-                <option value="healthcare">Healthcare & Life Sciences</option>
-                <option value="transformation">Digital Transformation</option>
-                <option value="other">Other Industry</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="experience">Years of Experience</label>
-            <select id="experience" name="experience" required>
-                <option value="" disabled selected>Select experience level</option>
-                <option value="0-2">0-2 years</option>
-                <option value="3-5">3-5 years</option>
-                <option value="5-10">5-10 years</option>
-                <option value="10+">10+ years</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-privacy">
-            <p>Your information is secure and will only be used to deliver your personalized assessment.</p>
-        </div>
-        <!-- This hidden field controls where Formspree redirects after submission -->
-        <input type="hidden" name="_next" value="https://andnikif.github.io/AI-proof/thank-you.html">
-        <button type="submit" class="btn btn-large btn-primary">Get Your Free AI Career Assessment</button>
-    </form>
-</div>
+    </section>
 
     <!-- Program Structure Section -->
     <section class="programs" id="programs">
@@ -357,9 +365,7 @@
 
     <!-- JavaScript -->
     <script>
-        
-            
-            // Smooth scrolling for anchor links
+         // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
