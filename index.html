@@ -140,7 +140,7 @@
             <p>Your information is secure and will only be used to deliver your personalized assessment.</p>
         </div>
         <!-- This hidden field controls where Formspree redirects after submission -->
-        <input type="hidden" name="_next" value="https://andnikif.github.io/AI-proof//thank-you.html">
+        <input type="hidden" name="_next" value="https://andnikif.github.io/AI-proof/thank-you.html">
         <button type="submit" class="btn btn-large btn-primary">Get Your Free AI Career Assessment</button>
     </form>
 </div>
@@ -357,46 +357,7 @@
 
     <!-- JavaScript -->
     <script>
-        // Form submission handling
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('ai-assessment-form');
-            const successMessage = document.getElementById('form-success');
-            
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    // In production, remove this preventDefault and let Formspree handle the submission
-                    // This is just for demonstration of the success message
-                    e.preventDefault();
-                    
-                    // Hide the form and show success message
-                    form.style.display = 'none';
-                    successMessage.style.display = 'block';
-                    
-                    // For actual implementation with Formspree:
-                    /*
-                    fetch(form.action, {
-                        method: 'POST',
-                        body: new FormData(form),
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            form.style.display = 'none';
-                            successMessage.style.display = 'block';
-                        } else {
-                            // Handle error
-                            alert('There was an error. Please try again.');
-                        }
-                    })
-                    .catch(error => {
-                        // Handle error
-                        alert('There was an error. Please try again.');
-                    });
-                    */
-                });
-            }
+        
             
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
